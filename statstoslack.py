@@ -9,7 +9,6 @@ class SlackStats(object):
         self.slack = Slacker(slack_api_token)
         self.channel = channel
         self.bot = bot
-        print self.bot
 
     @classmethod
     def from_crawler(cls, crawler):
@@ -31,7 +30,6 @@ class SlackStats(object):
                     "color": "good",
                 }
             ]
-        print self.channel
         self.slack.chat.post_message(channel='#'+str(self.channel[0]), text=None, icon_emoji=":+1:", username=self.bot[0], attachments=attachments)
 
     def finish_stats(self, spider, spider_stats):
