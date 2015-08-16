@@ -1,10 +1,9 @@
 # scrapy_logs_to_slack
-This scrapy extension will send two notifications to a slack channel:<br>
+This scrapy extension will send two notifications to a given slack channel:<br>
   - Scrape started<br>
   - Scrape finished with detailed statistics (items scraped, errors, requests/responses, etc.)<br>
 
 Slacker is required: https://github.com/os/slacker
-::
 
     $ pip install slacker
 
